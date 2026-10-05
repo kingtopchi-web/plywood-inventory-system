@@ -1,0 +1,30 @@
+{
+  "name": "plywood-inventory-system",
+  "version": "1.0.0",
+  "description": "Independent, transaction-driven Plywood Inventory Management System for Super Admin",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "admin"
+  ],
+  "scripts": {
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:admin": "npm --prefix admin run dev",
+    "start:backend": "npm --prefix backend start",
+    "build:admin": "npm --prefix admin run build",
+    "seed": "npm --prefix backend run seed:admin",
+    "seed:admin": "npm --prefix backend run seed:admin",
+    "install:all": "npm install && npm --prefix backend install && npm --prefix admin install"
+  },
+  "keywords": [
+    "plywood",
+    "inventory",
+    "management",
+    "admin",
+    "express",
+    "react",
+    "mongodb"
+  ],
+  "author": "Super Admin Team",
+  "license": "ISC"
+}

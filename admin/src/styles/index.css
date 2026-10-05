@@ -1,0 +1,109 @@
+@import './components.css';
+
+:root {
+  /* Modern Purple / Dashboard Theme Tokens */
+  --bg-body: #F1F5F9;
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fafafa;
+  --bg-input: #f4f7fe;
+
+  --border-subtle: #e2e8f0;
+  --border-focus: #4318ff;
+
+  /* Accent Colors (Purple / Vibrant tones) */
+  --color-primary: #4318ff;
+  --color-primary-hover: #3311db;
+  --color-primary-glow: rgba(67, 24, 255, 0.25);
+
+  --color-success: #05cd99;
+  --color-warning: #ffce20;
+  --color-danger: #ee5d50;
+  --color-info: #3b82f6;
+
+  /* Typography */
+  --text-primary: #2b3674;
+  --text-secondary: #a3aed1;
+  --text-muted: #a3aed1;
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Metrics & Transitions */
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.06);
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+/* Inherit light theme for the sidebar */
+.admin-sidebar {
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f4f7fe;
+  --bg-input: #f4f7fe;
+  --border-subtle: #f4f7fe;
+  --text-primary: #2b3674;
+  --text-secondary: #a3aed1;
+  --text-muted: #a3aed1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-body);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Global Card Styling */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}

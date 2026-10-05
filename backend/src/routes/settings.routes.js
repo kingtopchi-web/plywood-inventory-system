@@ -1,0 +1,11 @@
+const express = require('express');
+const router = express.Router();
+const settingsController = require('../controllers/settings.controller');
+const { authenticateSuperAdmin } = require('../middleware/auth.middleware');
+
+router.use(authenticateSuperAdmin);
+
+router.get('/', settingsController.getSettings);
+router.put('/', settingsController.updateSettings);
+
+module.exports = router;
